@@ -10,16 +10,16 @@ using Newtonsoft.Json;
 
 namespace HashDecoderAPI.Business.Implementations
 {
-    public class EncryptHandler : IRequestHandler<EncryptRequest, EncryptResponse>
+    public class DecryptHandler : IRequestHandler<DecryptRequest, DecryptResponse>
     {
 
-        public Task<EncryptResponse> Handle(EncryptRequest request, CancellationToken cancellationToken)
+        public Task<DecryptResponse> Handle(DecryptRequest request, CancellationToken cancellationToken)
         {
-            var retVal = ConvertHandler.EncryptString(request.Data, request.Passphrase);
+            var retVal = ConvertHandler.DecryptString(request.Data, request.Passphrase);
             
-            return Task.FromResult(new EncryptResponse
+            return Task.FromResult(new DecryptResponse
             {
-                Result = new EncryptDto
+                Result = new DecryptDto
                 {
                     Result = JsonConvert.SerializeObject(retVal)
                 }
