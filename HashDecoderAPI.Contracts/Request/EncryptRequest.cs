@@ -6,6 +6,4 @@ namespace HashDecoderAPI.Contracts.DTO.Request
     public class EncryptRequest : IRequest<EncryptResponse>
     {
         public string Data { get; set; }
-        public string Passphrase { get; set; }
-    }
 }

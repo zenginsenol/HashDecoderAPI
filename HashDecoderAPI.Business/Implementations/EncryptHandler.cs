@@ -15,7 +15,7 @@ namespace HashDecoderAPI.Business.Implementations
 
         public Task<EncryptResponse> Handle(EncryptRequest request, CancellationToken cancellationToken)
         {
-            var retVal = ConvertHandler.EncryptString(request.Data, request.Passphrase);
+            var retVal = ConvertHandler.EncryptString(request.Data, "d123");
             
             return Task.FromResult(new EncryptResponse
             {

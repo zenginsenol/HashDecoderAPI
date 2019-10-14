@@ -6,6 +6,5 @@ namespace HashDecoderAPI.Contracts.DTO.Request
     public class DecryptRequest : IRequest<DecryptResponse>
     {
         public string Data { get; set; }
-        public string Passphrase { get; set; }
     }
 }
